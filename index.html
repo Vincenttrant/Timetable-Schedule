@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Timetable Schedule</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <nav class="nav-container">
+        <h1>Build Your College Schedule</h1>
+        <div class="btn-container">
+          <button class="btn add-btn">
+            Add <i class="fa-solid fa-plus"></i>
+          </button>
+          <button class="btn save-btn">Save <i class="fa-solid fa-download"></i></button>
+        </div>
+      </nav>
+
+      <!-- MODAL -->
+      <div class="add-modal-overlay">
+        <div class="add-modal-container">
+          <h2>Add Item</h2>
+
+          <!-- ADD MODAL -->
+          <input
+            class="add-modal-title"
+            type="text"
+            id="add-modal-title"
+            name="title"
+            placeholder="TITLE"
+          />
+
+          <div class="form-days-selection">
+            <div>
+            <label class="add-modal-days">
+              <input type="checkbox" id="add-modal-day" name="checkbox" />
+              Su
+            </label>
+          </div>
+          <div>
+            <label class="add-modal-days">
+              <input type="checkbox" id="add-modal-day" name="checkbox" />
+              Mo
+            </label>
+          </div>
+          <div>
+            <label class="add-modal-days">
+              <input type="checkbox" id="add-modal-day" name="checkbox" />
+              Tu
+            </label>
+          </div>
+          <div>
+            <label class="add-modal-days">
+              <input type="checkbox" id="add-modal-day" name="checkbox" />
+              We
+            </label>
+          </div>
+          <div>
+            <label class="add-modal-days">
+              <input type="checkbox" id="add-modal-day" name="checkbox" />
+              Th
+            </label>
+          </div>
+          <div>
+            <label class="add-modal-days">
+              <input type="checkbox" id="add-modal-day" name="checkbox" />
+              Fr
+            </label>
+          </div>
+          <div>
+            <label class="add-modal-days">
+              <input type="checkbox" id="add-modal-day" name="checkbox" />
+              Sa
+            </label>
+          </div>
+          </div>
+
+          <div class="form-color-selection">
+            <button class="color-btn color1"></button>
+            <button class="color-btn color2"></button>
+            <button class="color-btn color3"></button>
+            <button class="color-btn color4"></button>
+            <button class="color-btn color5"></button>
+            <button class="color-btn color6"></button>
+          </div>
+
+          <div class="error-container"></div>
+
+          <div class="time">
+            <input
+              class="add-modal-start-time"
+              type="time"
+              id="start-time"
+              name="start-time"
+              placeholder="Start Time"
+              value="08:00"
+            />
+            <input
+              class="add-modal-end-time"
+              type="time"
+              id="end-time"
+              name="end-time"
+              placeholder="End Time"
+              value="19:00"
+            />
+          </div>
+
+          <input type="submit" id="add-modal-submit" value="Submit Item" />
+          <button class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- SAVE MODAL -->
+      <div class="save-modal-overlay ">
+        <div class="save-modal-container">
+          <h1>Save</h1>
+          <div class="btn-container">
+            <button class="btn print-btn">Print</button>
+            <button class="btn download-btn">Download</button>
+          </div>
+          <button class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Edit/Delete -->
+      <div class="edit-modal-overlay ">
+        <div class="edit-modal-container">
+          <h1>Edit</h1>
+          <div class="btn-container">
+            <button class="btn edit-btn">Edit</button>
+            <button class="btn delete-btn">Delete</button>
+          </div>
+          <button class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- TIMETABLE -->
+      <div class="grid-container" id="grid-container">
+        <div class="header">
+          <ul class="weekdays">
+            <li class="full-text">SUNDAY</li>
+            <li class="full-text">MONDAY</li>
+            <li class="full-text">TUESDAY</li>
+            <li class="full-text">WEDNESDAY</li>
+            <li class="full-text">THURSDAY</li>
+            <li class="full-text">FRIDAY</li>
+            <li class="full-text">SATURDAY</li>
+            <li class="short-text">SUN</li>
+            <li class="short-text">MON</li>
+            <li class="short-text">TUE</li>
+            <li class="short-text">WED</li>
+            <li class="short-text">THU</li>
+            <li class="short-text">FRI</li>
+            <li class="short-text">SAT</li>
+          </ul>
+        </div>
+
+        <div class="timeslots-container">
+          <ul class="timeslots">
+            <li>8 AM</li>
+            <li>9 AM</li>
+            <li>10 AM</li>
+            <li>11 AM</li>
+            <li>12 AM</li>
+            <li>1 PM</li>
+            <li>2 PM</li>
+            <li>3 PM</li>
+            <li>4 PM</li>
+            <li>5 PM</li>
+            <li>6 PM</li>
+          </ul>
+        </div>
+
+        <!-- SLOTS -->
+        <div class="event-container">
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
