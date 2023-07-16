@@ -1,6 +1,6 @@
 # Timetable Schedule
 
-## This web application is an HTML/CSS, JavaScript, and Firebase-based schedule timetable generator. 
+## This web application is an HTML/CSS, JavaScript, and Firebase-based schedule timetable generator. <a href="https://timetable-schedule.netlify.app/">Demo</a>
 
 ## The motivation behind the development of this project comes from my desire to provide a visually appealing application for organizing and managing college classes efficiently. Below are some notable features of the project.
 
