@@ -1,22 +1,22 @@
 # Timetable Schedule
 
-## This web application is an HTML/CSS, JavaScript, and Firebase-based schedule timetable generator. <a href="https://timetable-schedule.netlify.app/" target="_blank">Demo</a>
+The Timetable Schedule Web Application is a sophisticated HTML/CSS, JavaScript, and Firebase-powered schedule timetable generator. Its primary purpose is to offer a visually appealing and efficient solution for organizing and managing college classes. For the demo website, you can visit here <a href="https://timetable-schedule.netlify.app/" target="_blank">Timetable Schedule</a>.
 
-## The motivation behind the development of this project comes from my desire to provide a visually appealing application for organizing and managing college classes efficiently. Below are some notable features of the project.
+## Features
 
-* Users can interact and add, edit, delete slots into the timetable.
-* Adding each slot requires a title, selection of days, start time, end time, and color
-* Users can save timetable as PDF, or print it.
-* Application provides a user-friendly interface with modal overlays such as the adding and saving overlays.
-* Timetable slots are stored into a Firebase Realtime Databse.
-* Projects uses HTML, CSS, and JavaScript.
+* Users can interact with the timetable by adding, editing, and deleting slots into the timetable.
+* Each slot can be customized with essential details, including a title, days of the week, start time, end time, and color coding for better visualization.
+* The application allows users to save their timetable as PDF files, or print them out.
+* Application provides a clear design for user-friendly interface with modal overlays such as the adding and saving overlays.
+* All timetable slots are stored into a Firebase Realtime Database, ensuring data synchronization across devices.
 
 ## Initial Firebase
-Beign by creating a new Firebase project. Next create a Realtime Database. Extract the URL and insert into appSettings' code databaseURL.
-
-<hr>
+1. Set up by creating a new Firebase project.
+2. Create a Realtime Database within Firebase.
+3. Extract the URL and insert into appSettings' code.
 
 ## Visual
+
 ![image1](https://i.gyazo.com/7ef94bbb54f845e5144e3dd62153a506.png)
 ![image2](https://i.gyazo.com/cca05297f6c0690bd41eb3ad988c2fae.png)
 ![image3](https://i.gyazo.com/aae60dfcdea55fb82ee22bf0528c625b.png)
